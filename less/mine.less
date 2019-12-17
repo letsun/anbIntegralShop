@@ -1,0 +1,168 @@
+@import 'reset.less';
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    .header {
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: 500;
+            padding: 31px 0;
+        }
+    }
+
+    .content {
+        position: relative;
+
+        .name {
+            width: 732px;
+            height: 352px;
+            margin: 0 auto;
+        }
+
+        .nickname {
+            position: absolute;
+            left: 126px;
+            top: 46px;
+
+            .nickname-text {
+                font-size: 24px;
+                line-height: 24px;
+                color: #fff;
+            }
+        }
+
+        .jifen {
+            position: absolute;
+            left: 282px;
+            top: 133px;
+
+            .number {
+                font-size: 56px;
+                line-height: 56px;
+                color: #fff;
+            }
+
+            .able {
+                font-size: 21px;
+                line-height: 21px;
+                color: #fff;
+                margin: 20px 0 0;
+                text-align: center;
+            }
+        }
+        
+        .sign {
+            position: absolute;
+            right: 30px;
+            top: 42px;
+        }
+    }
+
+    .nav {
+
+        .details {
+            display: flex;
+
+            li {
+                width: 187.5em;
+                text-align: center;
+
+                div {
+                    height: 26px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+
+    .change {
+        margin-top: 51px;
+        
+        .exchange {
+
+            li {
+                display: flex;
+                width: 680px;
+                height: 76px;
+                margin: 0 auto;
+                line-height: 76px;
+                border-bottom: 1px solid #ecebf0;
+
+                .address-img {
+                    width: 28px;
+                    height: 34px;
+                    margin: 20px 11px 0;
+                }
+
+                .rules-img {
+                    width: 29px;
+                    height: 29px;
+                    margin: 24px 11px 0;
+                }
+
+                .how-img {
+                    width: 31px;
+                    height: 31px;
+                    margin: 19px 10px 0;
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 111;
+
+        width: 750px;
+        height: 113px;
+
+        .footer-nav {
+            height: 113px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 222;
+
+            li {
+                position: absolute;
+                bottom: 12px;
+                width: 187.5px;
+                text-align: center;
+                color: #ccc;
+                font-size: 21px;
+                line-height: 21px;
+
+                div {
+                    margin-top: 9px;
+                }
+            }
+
+            .home {
+                left: 0;
+            }
+
+            .lottery {
+                left: 187.5px;
+            }
+
+            .exchange {
+                left: 375px;
+            }
+
+            .mine {
+                left: 562.5px;
+            }
+
+            .active {
+                color: #1c459d;
+            }
+        }
+    }
+}

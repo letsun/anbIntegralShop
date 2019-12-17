@@ -1,0 +1,69 @@
+@import 'reset.less';
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    .header {
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: 500;
+            padding: 31px 0;
+        }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 111;
+
+        width: 750px;
+        height: 113px;
+
+        .footer-nav {
+            height: 113px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 222;
+
+            li {
+                position: absolute;
+                bottom: 12px;
+                width: 187.5px;
+                text-align: center;
+                color: #ccc;
+                font-size: 21px;
+                line-height: 21px;
+
+                div {
+                    margin-top: 9px;
+                }
+            }
+
+            .home {
+                left: 0;
+            }
+
+            .lottery {
+                left: 187.5px;
+            }
+
+            .exchange {
+                left: 375px;
+            }
+
+            .mine {
+                left: 562.5px;
+            }
+
+            .active {
+                color: #1c459d;
+            }
+        }
+    }
+}

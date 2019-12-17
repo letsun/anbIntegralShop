@@ -1,0 +1,199 @@
+@import 'reset.less';
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    .header {
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: 500;
+            padding: 31px 0;
+        }
+    }
+
+    .content {
+
+        .details {
+            width: 100%;
+            background-color: #1b449c;
+
+            h2 {
+                font-size: 30px;
+                line-height: 30px;
+                color: #fdfffe;
+                padding: 32px 0 28px;
+                text-align: center;
+            }
+        }
+        
+        .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .picture {
+            width: 373px;
+            height: 373px;
+            margin: 0 auto;
+
+            .picture-img {
+                width: 373px;
+                height: 373px;
+            }
+        }
+
+        .phone {
+            width: 750px;
+            height: 135px;
+            border: 1px solid #d8d8d8;
+            position: relative;
+            display: flex;
+
+            .phone-text {
+                margin-left: 43px;
+
+                .phone-name {
+                    font-size: 26px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    color: #323232;
+                    margin-top: 28px;
+                    
+                    word-break: break-all;
+                }
+
+                .need {
+                    font-size: 28px;
+                    line-height: 28px;
+                    color: #f85e54;
+                    margin-top: 19px;
+
+                    del {
+                        font-size: 22px;
+                        color: #999;
+                        margin-left: 18px;
+                    }
+                }
+            }
+            
+            .surplus {
+                position: absolute;
+                right: 52px;
+                bottom: 54px;
+                font-size: 21px;
+                line-height: 21px;
+                color: #1c4499;
+            }
+        }
+
+        .huawei {
+            width: 750px;
+            height: 506px;
+        }
+    }
+    
+    .box {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2222;
+        display: none;
+
+        .box-small {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 536px;
+            height: 333px;
+            background-color: #fff;
+            border-radius: 10px;
+            z-index: 3333;
+
+            h3 {
+                width: 536px;
+                height: 83px;
+                font-size: 33px;
+                line-height: 83px;
+                text-align: center;
+            }
+
+            .box-head {
+                width: 536px;
+                height: 168px;
+                font-size: 28px;
+                line-height: 168px;
+                text-align: center;
+                border-top: 1px solid #f1f1f1;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            .box-foot {
+                height: 81px;
+                color: #fff;
+                font-size: 28px;
+                line-height: 81px;
+                text-align: center;
+                background-color: #1b449c;
+                border-radius: 0 0 0 10px;
+            }
+        }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        width: 750px;
+        height: 98px;
+        display: flex;
+
+        z-index: 1111;
+
+        .integral {
+            width: 409px;
+            height: 98px;
+            padding-left: 53px;
+            margin-top: 23px;
+
+            .pay {
+                font-size: 25px;
+                line-height: 25px;
+                font-weight: 600;
+
+                small {
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: #f14754;
+                }
+            }
+
+            .now {
+                font-size: 20px;
+                line-height: 20px;
+                color: #656565;
+                margin-top: 12px;
+            }
+        }
+        
+        .immediately {
+            width: 288px;
+            height: 98px;
+            font-size: 29px;
+            line-height: 98px;
+            color: #fff;
+            text-align: center;
+            background-color: #1b449c;
+        }
+    }
+}
