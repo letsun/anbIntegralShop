@@ -1,5 +1,10 @@
 @import 'reset.less';
 
+body {
+    background-image: url(../img/1_15.png);
+    background-repeat: no-repeat;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -13,6 +18,313 @@
             text-align: center;
             font-weight: 500;
             padding: 31px 0;
+            background-color: #fff;
+        }
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .change {
+            position: absolute;
+            left: 40px;
+            top: 71px;
+            font-size: 61px;
+            line-height: 61px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .my-integral {
+            position: absolute;
+            left: 240px;
+            top: 156px;
+            font-size: 30px;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .activity {
+            position: absolute;
+            right: 0;
+            top: 27px;
+        }
+    }
+
+    .details {
+
+        .small-bg {
+            position: absolute;
+            left: 25px;
+            top: 346px;
+            width: 696px;
+            height: 865px;
+            background-color: #fff;
+            border-radius: 20px;
+
+            .small-bg-img {
+                position: absolute;
+                left: 31px;
+                top: 31px;
+            }
+        }
+
+        .lucky-draw {
+            position: absolute;
+            left: 85px;
+            top: 407px;
+            width: 579px;
+            height: 568px;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 188px;
+                height: 184px;
+                margin-right: 7px;
+
+                .integral1 {
+                    position: absolute;
+                    left: 48px;
+                    top: 22px;
+
+                    .integral1-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 7px;
+                    }
+                }
+
+                .first-prize {
+                    position: absolute;
+                    left: 230px;
+                    top: 19px;
+
+                    .first-prize-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+
+                .thanks {
+                    position: absolute;
+                    left: 438px;
+                    top: 15px;
+
+                    .thanks-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: -8px;
+                        margin-top: 8px;
+                    }
+                }
+
+                .participate {
+                    position: absolute;
+                    left: 29px;
+                    top: 205px;
+
+                    .participate-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+
+                .expend {
+
+                    .expend-text {
+                        position: absolute;
+                        left: 239px;
+                        top: 328px;
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: #33342f;
+                    }
+                }
+
+                .integral2 {
+                    position: absolute;
+                    left: 438px;
+                    top: 212px;
+
+                    .integral2-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 7px;
+                    }
+                }
+
+                .second-prize {
+                    position: absolute;
+                    left: 28px;
+                    top: 399px;
+
+                    .second-prize-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+
+                .integral3 {
+                    position: absolute;
+                    left: 218px;
+                    top: 397px;
+
+                    .integral3-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 28px;
+                    }
+                }
+
+                .third-prize {
+                    position: absolute;
+                    left: 424px;
+                    top: 399px;
+
+                    .third-prize-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+            }
+
+            .three {
+                margin-right: 0;
+            }
+
+            .six {
+                margin-right: 0;
+            }
+
+            .nine {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .winners {
+        position: absolute;
+        left: 57px;
+        top: 1039px;
+        width: 635px;
+        height: 60px;
+        background-color: #7f7f7f;
+        border-radius: 50px;
+
+        .horn {
+            position: absolute;
+            left: 48px;
+            top: 17px;
+        }
+
+        .lucky {
+
+            .lucky-people{
+                display: flex;
+
+                .lucky-guy{
+
+                    .lucky-name{
+                        font-size: 24px;
+                        line-height: 60px;
+                        text-indent: 100px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .winning {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2222;
+        display: none;
+
+        .close {
+            position: absolute;
+            left: 621px;
+            top: 254px;
+        }
+
+        .winning-record {
+
+            .record-bg {
+                position: absolute;
+                left: 33px;
+                top: 313px;
+            }
+
+            .record-nav {
+                position: absolute;
+                left: 117px;
+                top: 501px;
+
+                .record-people {
+
+                    .record {
+                        display: flex;
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #fa4043;
+
+                        .record-name {
+                            margin: 0 69px 28px 31px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .win {
+        position: absolute;
+        left: 63px;
+        top: 1130px;
+        width: 619px;
+        height: 64px;
+        display: flex;
+
+        .win-details {
+            width: 277px;
+            height: 64px;
+            font-size: 27px;
+            line-height: 64px;
+            text-align: center;
+            color: #fff;
+            background-color: #f9ba37;
+            border-radius: 50px;
+        }
+
+        .win-record {
+            width: 277px;
+            height: 64px;
+            font-size: 27px;
+            line-height: 64px;
+            text-align: center;
+            color: #fff;
+            margin-left: 65px;
+            background-color: #fb3630;
+            border-radius: 50px;
         }
     }
 
