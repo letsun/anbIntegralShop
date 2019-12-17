@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>安倍积分商城</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../js/home.js">
 </head>
 <body>
     <div class="container">
@@ -67,23 +68,74 @@
             </div>
             <ul class="footer-nav">
                 <li class="home active">
-                    <img class="home-img" src="../img/1_6.png">
+                    <div class="home-img">
+                        <img src="../img/1_6.png">
+                    </div>
+                    <div class="home-img1">
+                        <img src="../img/1_7.png">
+                    </div>
                     <div>首页</div>
                 </li>
                 <li class="lottery">
-                    <img class="lottery-img" src="../img/1_8.png">
+                    <div class="lottery-img">
+                        <img src="../img/1_8.png">
+                    </div>
+                    <div class="lottery-img1">
+                        <img src="../img/1_9.png">
+                    </div>
                     <div>积分抽奖</div>
                 </li>
                 <li class="exchange">
-                    <img class="exchange-img" src="../img/1_10.png">
+                    <div class="exchange-img">
+                        <img src="../img/1_10.png">
+                    </div>
+                    <div class="exchange-img1">
+                        <img src="../img/1_11.png">
+                    </div>
                     <div>兑换记录</div>
                 </li>
                 <li class="mine">
-                    <img class="mine-img" src="../img/1_12.png">
+                    <div class="mine-img">
+                        <img src="../img/1_12.png">
+                    </div>
+                    <div class="mine-img1">
+                        <img src="../img/1_13.png">
+                    </div>
                     <div>我的</div>
                 </li>
             </ul>
         </div>
     </div>
+    <script src="../js/jquery-2.2.2.min.js"></script>
+    <script>
+        $('.lottery').on('click',function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $('.home-img').hide();
+            $('.lottery-img').hide();
+            $('.lottery-img1').show();
+            $('.home-img1').show();
+        });
+        $('.exchange').on('click',function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $('.lottery-img1').hide();
+            $('.exchange-img').hide();
+            $('.home-img').hide();
+            $('.mine-img1').hide();
+            $('.exchange-img1').show();
+            $('.lottery-img').show();
+            $('.home-img1').show();
+            $('.mine-img').show();
+        });
+        $('.mine').on('click',function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $('.exchange-img1').hide();
+            $('.mine-img').hide();
+            $('.exchange-img').show();
+            $('.mine-img1').show();
+        });
+    </script>
 </body>
 </html>
