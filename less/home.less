@@ -22,6 +22,34 @@
         }
     }
 
+    .title {
+        height: 74px;
+        display: flex;
+        position: relative;
+
+        .horn {
+            margin: 20px 0 0 43px;
+        }
+
+        .title-text {
+            flex: 1;
+            font-size: 23px;
+            line-height: 74px;
+            color: #666;
+            margin-left: 26px;
+        }
+    }
+
+    .title::after {
+        content: "";
+        position: absolute;
+        left: 1px;
+        bottom: 0;
+        width: 748px;
+        height: 1px;
+        background-color: #ebebeb;
+    }
+
     .content {
 
         .goods {
