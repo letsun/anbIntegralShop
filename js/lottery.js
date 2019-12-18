@@ -1,15 +1,15 @@
-$('.lottery').on('click',function(){
+$('.home').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
-    $('.home-img1').hide();
+    $('.home-img').hide();
     $('.exchange-img1').hide();
     $('.mine-img1').hide();
-    $('.lottery-img').hide();
-    $('.lottery-img1').show();
-    $('.home-img').show();
+    $('.lottery-img1').hide();
+    $('.lottery-img').show();
+    $('.home-img1').show();
     $('.mine-img').show();
     $('.exchange-img').show();
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/lottery.html'
+    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/home.html'
 });
 $('.exchange').on('click',function(){
     $(this).siblings().removeClass('active');

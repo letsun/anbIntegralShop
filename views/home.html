@@ -69,10 +69,10 @@
             <ul class="footer-nav">
                 <li class="home active">
                     <div class="home-img">
-                        <img src="../img/1_6.png">
+                        <img src="../img/1_7.png">
                     </div>
                     <div class="home-img1">
-                        <img src="../img/1_7.png">
+                        <img src="../img/1_6.png">
                     </div>
                     <div>首页</div>
                 </li>
@@ -107,35 +107,6 @@
         </div>
     </div>
     <script src="../js/jquery-2.2.2.min.js"></script>
-    <script>
-        $('.lottery').on('click',function(){
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active');
-            $('.home-img').hide();
-            $('.lottery-img').hide();
-            $('.lottery-img1').show();
-            $('.home-img1').show();
-        });
-        $('.exchange').on('click',function(){
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active');
-            $('.lottery-img1').hide();
-            $('.exchange-img').hide();
-            $('.home-img').hide();
-            $('.mine-img1').hide();
-            $('.exchange-img1').show();
-            $('.lottery-img').show();
-            $('.home-img1').show();
-            $('.mine-img').show();
-        });
-        $('.mine').on('click',function(){
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active');
-            $('.exchange-img1').hide();
-            $('.mine-img').hide();
-            $('.exchange-img').show();
-            $('.mine-img1').show();
-        });
-    </script>
+    <script src="../js/home.js"></script>
 </body>
 </html>

@@ -1,3 +1,16 @@
+$('.home').on('click',function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    $('.lottery-img1').hide();
+    $('.exchange-img1').hide();
+    $('.home-img').hide();
+    $('.mine-img1').hide();
+    $('.exchange-img').show();
+    $('.lottery-img').show();
+    $('.home-img1').show();
+    $('.mine-img').show();
+    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/home.html'
+});
 $('.lottery').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -10,19 +23,6 @@ $('.lottery').on('click',function(){
     $('.mine-img').show();
     $('.exchange-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/lottery.html'
-});
-$('.exchange').on('click',function(){
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    $('.lottery-img1').hide();
-    $('.exchange-img').hide();
-    $('.home-img1').hide();
-    $('.mine-img1').hide();
-    $('.exchange-img1').show();
-    $('.lottery-img').show();
-    $('.home-img').show();
-    $('.mine-img').show();
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/exchange.html'
 });
 $('.mine').on('click',function(){
     $(this).siblings().removeClass('active');
