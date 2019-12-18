@@ -1,5 +1,10 @@
-//点击跳转抽奖页面
-
+//轮播图
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination : '.swiper-pagination',
+    autoplay: 3000,//可选选项，自动滑动
+    autoplayDisableOnInteraction: false,
+});
 
 //点击跳转兑换商品页面
 $('#imdi1').on('click',function(){

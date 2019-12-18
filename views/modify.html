@@ -33,41 +33,34 @@
                     <div>联系电话</div>
                     <input type="text" placeholder="请填写您的手机号码" maxlength="30" value="135">
                 </li>
-                <li>
-                    <div>所在地区</div>
-                    <div class="choose">请选择</div>
-                    <img class="choose-img" id="choose" src="../img/1_42.png">
+                <li class="inputBox">
+                    <div>省</div>
+                    <div>
+                        <select id="province" class="ssxz">
+                            <option>选择省份</option>
+                        </select>
+                    </div>
                 </li>
-                <li>
-                    <div>街道</div>
-                    <div class="choose">请选择</div class="choose">
-                    <img class="choose-img" src="../img/1_42.png">
+                <li class="inputBox cityBox">
+                    <div>市</div>
+                    <div>
+                        <select id="city" class="ssxz">
+                            <option>选择市级</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="inputBox areaBox">
+                    <div>区</div>
+                    <div>
+                        <select id="area" class="ssxz">
+                            <option>选择区/县</option>
+                        </select>
+                    </div>
                 </li>
                 <li>
                     <textarea class="input1" placeholder="请填写详细地址，不少于5个字"></textarea>
                 </li>
             </ul>
-        </div>
-        <!--选择省市区-->
-        <div class="city">
-            <div class="ssxz">
-                <div class="inputBox">
-                    <select id="province">
-                        <option>选择省份</option>
-                    </select>
-                </div>
-                <div class="inputBox cityBox">
-                    <select id="city">
-                        <option>选择市级</option>
-                    </select>
-                </div>
-                <div class="inputBox areaBox">
-                    <select id="area">
-                        <option>选择区/县</option>
-                    </select>
-                </div>
-                <div class="sure">确定</div>
-            </div>
         </div>
         <!--设置默认-->
         <div class="default">
