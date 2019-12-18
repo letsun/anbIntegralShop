@@ -1,3 +1,4 @@
+//点击跳转我的页面
 $('.home').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -11,6 +12,7 @@ $('.home').on('click',function(){
     $('.exchange-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/home.html'
 });
+//点击跳转抽奖页面
 $('.lottery').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -24,6 +26,7 @@ $('.lottery').on('click',function(){
     $('.exchange-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/lottery.html'
 });
+//点击跳转兑换记录页面
 $('.exchange').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');

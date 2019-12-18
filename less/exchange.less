@@ -9,9 +9,10 @@
         height: 100%;
 
         h1 {
-            width: 150px;
             font-size: 35px;
-            margin: 31px auto;
+            text-align: center;
+            font-weight: 500;
+            padding: 31px 0;
         }
 
         .name {
@@ -22,7 +23,6 @@
     }
 
     .nav {
-        margin-top: 35px;
 
         .infor {
             height: 77px;
@@ -68,6 +68,7 @@
     }
 
     .content {
+        padding-bottom: 113px;
 
         .form {
             margin-bottom: 11px;
@@ -76,15 +77,18 @@
                 display: flex;
 
                 .order {
+                    width: 450px;
                     height: 65px;
                     font-size: 23px;
                     line-height: 85px;
-                    padding: 0 40px;
+                    padding-left: 40px;
                     color: #666;
+                    word-break: break-all;
+                    .ellipsis(1);
                 }
                 
                 .status {
-                    width: 320px;
+                    width: 260px;
                     height: 65px;
                     display: flex;
                     flex-direction: row-reverse;
@@ -93,13 +97,14 @@
                         font-size: 23px;
                         line-height: 85px;
                         color: #19459c;
-                        margin-left: 10px;
+                        margin-right: 47px;
                     }
 
                     .cancle {
                         font-size: 23px;
                         line-height: 85px;
                         color: #19459c;
+                        margin-right: 47px;
                     }
 
                     .hid {
@@ -129,12 +134,11 @@
     
                     .shop-name {
                         width: 366px;
-                        height: 64px;
-                        font-size: 26px;
+                        height: 32px;
+                        font-size: 25px;
                         line-height: 32px;
                         color: #323232;
                         margin-top: 10px;
-                        
                         word-break: break-all;
                         
                         .ellipsis(2);
@@ -144,14 +148,14 @@
                         font-size: 21px;
                         line-height: 21px;
                         color: #999;
-                        margin-top: 10px;
+                        margin-top: 9px;
                     }
     
                     .need {
                         font-size: 26px;
                         line-height: 26px;
                         color: #f85e54;
-                        margin-top: 10px;
+                        margin-top: 39px;
                     }
                 }
     
@@ -201,11 +205,11 @@
                     border: 1px solid #efefef;
                     border-radius: 10px;
                 }
-    
-                .hid {
-                    display: none;
-                }
             }
+        }
+
+        .hid {
+            display: none;
         }
     }
 

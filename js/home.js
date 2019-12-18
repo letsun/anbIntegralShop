@@ -1,3 +1,4 @@
+//点击跳转抽奖页面
 $('.lottery').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -11,6 +12,7 @@ $('.lottery').on('click',function(){
     $('.exchange-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/lottery.html'
 });
+//点击跳转兑换记录页面
 $('.exchange').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -24,6 +26,7 @@ $('.exchange').on('click',function(){
     $('.mine-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/exchange.html'
 });
+//点击跳转我的页面
 $('.mine').on('click',function(){
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -37,3 +40,7 @@ $('.mine').on('click',function(){
     $('.home-img').show();
     window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/mine.html'
 });
+//点击跳转兑换商品页面
+$('#imdi1').on('click',function(){
+    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/details.html'
+})
