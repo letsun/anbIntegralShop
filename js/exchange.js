@@ -1,57 +1,11 @@
-//点击跳转首页页面
-$('.home').on('click',function(){
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    $('.lottery-img1').hide();
-    $('.exchange-img1').hide();
-    $('.home-img').hide();
-    $('.mine-img1').hide();
-    $('.exchange-img').show();
-    $('.lottery-img').show();
-    $('.home-img1').show();
-    $('.mine-img').show();
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/home.html'
-});
-//点击跳转抽奖页面
-$('.lottery').on('click',function(){
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    $('.home-img1').hide();
-    $('.exchange-img1').hide();
-    $('.mine-img1').hide();
-    $('.lottery-img').hide();
-    $('.lottery-img1').show();
-    $('.home-img').show();
-    $('.mine-img').show();
-    $('.exchange-img').show();
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/lottery.html'
-});
-//点击跳转我的页面
-$('.mine').on('click',function(){
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    $('.exchange-img1').hide();
-    $('.home-img1').hide();
-    $('.lottery-img1').hide();
-    $('.mine-img').hide();
-    $('.exchange-img').show();
-    $('.mine-img1').show();
-    $('.lottery-img').show();
-    $('.home-img').show();
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/mine.html'
-});
-
+var state = 0;
 //切换导航条
 $('.nav-ation').on('click',function(){
     var index = $(this).index();
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-    $('.form').hide();
-    if (index == 0) {
-        $('.form').show();
-    } else {
-        $('.form').eq(index-1).show();
-    }
+    state = $(this).attr('data-state');
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.product-list').html('');
+    
 })
 //点击我要退单弹出退货框
 $('.chargeback').on('click',function(){
@@ -69,4 +23,64 @@ $('.yes').on('click',function(){
 $('.close').on('click',function(){
     $('.bg').hide();
     $('.box').hide();
-})
+});
+
+var scrollWra = new BScroll('#scrollWrap',{
+    scrollbar: {
+        fade: true
+    },
+    click: true,
+    pullUpLoad: {
+        threshold: 0
+    }
+});
+
+var hasNext = true;     // 是否有下一页;
+var page = 1;    // 从第一页开始加载;
+
+// 监听页面上滑加载;
+scrollWra.on('pullingUp', function () {
+    if (!hasNext) {
+        $('#loading').text('已经没有更多数据了');
+        return;
+    }
+
+    page++;
+
+    if (page == 6) {
+        hasNext = false;
+    }
+
+    var html = '';
+
+    for (var i = 0; i < 10; i++) {
+        html += '<div class="form">';
+        html += '<div class="trade">';
+        html += '<div class="order">订单编号：FJ123123123123</div>';
+        html += '<div class="status">';
+        html += '<div class="deal hid">交易完成</div>';
+        html += '<div class="cancle hid">已退单</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '<div class="shop">';
+        html += '<img class="shop-img" src="../img/1_3.png">';
+        html += '<div class="shop-text">';
+        html += '<div class="shop-name">华为P30全网通双4G手机</div>';
+        html += '<div class="shop-number">市场价值3899元</div>';
+        html += '<div class="need">17896积分</div>';
+        html += '</div>';
+        html += '<div class="number">x1</div>';
+        html += '</div>';
+        
+        html += '<ul class="btn">';
+        html += '<li class="charge-back hid">已退单</li>';
+        html += '<li class="confirm">确认收货</li>';
+        html += '<li class="chargeback">我要退单</li>';
+        html += '</ul>';
+        html += '</div>';
+    }
+
+    $('.product-list').append(html);
+    scrollWra.finishPullUp();
+    scrollWra.refresh();
+});

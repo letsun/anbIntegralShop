@@ -1,0 +1,267 @@
+@import 'reset.less';
+
+html {
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    .header {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: 500;
+            padding: 31px 0;
+        }
+    }
+
+    .content {
+        
+        .back {
+            position: absolute;
+            left: 57px;
+            top: 130px;
+
+            .back-img {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+        .details {
+            width: 100%;
+            background-color: #1b449c;
+
+            h2 {
+                font-size: 30px;
+                line-height: 30px;
+                color: #fdfffe;
+                padding: 32px 0 28px;
+                text-align: center;
+            }
+        }
+    }
+
+    .main {
+        background-color: #fff;
+
+        .write {
+            height: 571px;
+            
+            li {
+                font-size: 28px;
+                display: flex;
+                border-bottom: 2px solid #f7f7f9;
+
+                div {
+                    width: 137px;
+                    height: 93px;
+                    line-height: 93px;
+                    text-indent: 25px;
+                    font-weight: 600;
+                }
+
+                input {
+                    width: 368px;
+                    height: 93px;
+                    flex: 1;
+                    font-size: 28px;
+                    margin-left: 26px;
+                }
+
+                .choose {
+                    color: #8c8b90;
+                    margin-left: 400px;
+                }
+
+                .choose-img {
+                    width: 15px;
+                    height: 30px;
+                    margin: 35px 0 0 20px;
+                }
+
+                .input1 {
+                    width: 100%;
+                    height: 179px;
+                    font-size: 27px;
+                    padding: 18px 0 0 21px;
+                    border: none;
+                    .ellipsis(3);
+                }
+            }
+        }
+    }
+
+    .city {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2222;
+        display: none;
+
+        .ssxz {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #fff;
+            width: 600px;
+            height: 400px;
+
+            .inputBox {
+                width: 90%;
+                margin: 10px 0;
+                position: relative;
+                padding-left: 16px;
+    
+                input[type="text"],
+                select {
+                    width: 95%;
+                    height: 50px;
+                    line-height: 50px;
+                    padding-left: 5%;
+                    background: rgb(217, 217, 217);
+                    font-size: 14px;
+                }
+    
+                select {
+                    width: 100%;
+                    border: none;
+                    color: #999 !important;
+                    font-size: 14px !important;
+                    -webkit-appearance: inherit;
+                    -moz-appearance: inherit;
+                    background: url("../img/1_43.png") right center no-repeat rgb(217, 217, 217);
+                    outline: none;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                }
+    
+                input:-webkit-autofill {
+                    box-shadow: 0 0 0 1000px rgb(217, 217, 217) inset;
+                }
+    
+                input::-webkit-input-placeholder {
+                    color: #999;
+                }
+            }
+    
+            .cityBox, .areaBox {
+                display: none;
+            }
+
+            .sure {
+                width: 300px;
+                height: 52px;
+                font-size: 25px;
+                line-height: 52px;
+                text-align: center;
+                color: #fff;
+                background-color: #1b449c;
+                border-radius: 50px;
+                margin: 120px 0 0 130px;
+            }
+        }
+    }
+
+    .default {
+        height: 96px;
+        display: flex;
+        margin-top: 20px;
+        background-color: #fff;
+
+        .set {
+            font-size: 28px;
+            line-height: 96px;
+            text-indent: 25px;
+        }
+
+        #toggle-button { 
+            display: none; 
+        }
+
+        .button-label {
+            position: relative;
+            display: inline-block;
+            width: 110px;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            cursor: pointer;
+            height: 60px;
+            margin: 20px 0 0 475px;
+        }
+        
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .button-label .text {
+            line-height: 30px;
+            font-size: 18px;
+
+           -webkit-user-select: none;
+           user-select: none;
+        }
+
+        .on { 
+            color: #fff; 
+            display: none; 
+            text-indent: 10px;
+        }
+
+        .off { 
+            color: #fff; 
+            display: inline-block; 
+            text-indent: 53px;
+        }
+
+        .button-label .circle{
+            left: 0;
+            transition: all 0.3s;
+        }
+
+        #toggle-button:checked + label.button-label .circle {
+            left: 50px;
+        }
+
+        #toggle-button:checked + label.button-label .on { 
+            display: inline-block; 
+        }
+
+        #toggle-button:checked + label.button-label .off { 
+            display: none; 
+        }
+
+        #toggle-button:checked + label.button-label {
+            background-color: #1b449c;
+        }
+    }
+
+    .save {
+        width: 598px;
+        height: 76px;
+        font-size: 29px;
+        line-height: 76px;
+        text-align: center;
+        color: #fff;
+        background-color: #1b449c;
+        border-radius: 50px;
+        margin: 87px 0 0 76px;
+    }
+}

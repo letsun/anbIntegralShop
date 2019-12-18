@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=750, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地址管理</title>
+    <link rel="stylesheet" href="../css/modify.css">
+</head>
+<body>
+    <div class="container">
+        <!--积分商城-->
+        <div class="header">
+            <h1>积分商城</h1>
+        </div>
+        <div class="content">
+            <div class="back">
+                <img class="back-img" src="../img/back.png">
+            </div>
+            <!--地址管理-->
+            <div class="details">
+                <h2>地址管理</h2>
+            </div>
+        </div>
+        <!--联系人信息-->
+        <div class="main">
+            <ul class="write">
+                <li>
+                    <div>收货人</div>
+                    <input type="text" placeholder="请填写您的姓名" maxlength="15" value="林嘉悦">
+                </li>
+                <li>
+                    <div>联系电话</div>
+                    <input type="text" placeholder="请填写您的手机号码" maxlength="30" value="135">
+                </li>
+                <li>
+                    <div>所在地区</div>
+                    <div class="choose">请选择</div>
+                    <img class="choose-img" id="choose" src="../img/1_42.png">
+                </li>
+                <li>
+                    <div>街道</div>
+                    <div class="choose">请选择</div class="choose">
+                    <img class="choose-img" src="../img/1_42.png">
+                </li>
+                <li>
+                    <textarea class="input1" placeholder="请填写详细地址，不少于5个字"></textarea>
+                </li>
+            </ul>
+        </div>
+        <!--选择省市区-->
+        <div class="city">
+            <div class="ssxz">
+                <div class="inputBox">
+                    <select id="province">
+                        <option>选择省份</option>
+                    </select>
+                </div>
+                <div class="inputBox cityBox">
+                    <select id="city">
+                        <option>选择市级</option>
+                    </select>
+                </div>
+                <div class="inputBox areaBox">
+                    <select id="area">
+                        <option>选择区/县</option>
+                    </select>
+                </div>
+                <div class="sure">确定</div>
+            </div>
+        </div>
+        <!--设置默认-->
+        <div class="default">
+            <div class="set">设为默认</div>
+            <input type="checkbox" id="toggle-button">
+            <label for="toggle-button" class="button-label">
+                <span class="circle"></span>
+                <span class="text on"></span>
+                <span class="text off"></span>
+            </label>
+        </div>
+        <!--保存按钮-->
+        <div class="save">保存地址</div>
+    </div>
+    <script src="../js/jquery-2.2.2.min.js"></script>
+    <script src="../js/cityData.js"></script>
+    <script src="../js/citySelect.js"></script>
+    <script src="../js/modify.js"></script>
+</body>
+</html>
