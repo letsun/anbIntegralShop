@@ -116,7 +116,8 @@ scrollWra.on('pullingUp', function () {
 var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     direction : 'vertical',
-    pagination : '.swiper-pagination',
     autoplay: 3000,//可选选项，自动滑动
     autoplayDisableOnInteraction: false,
+    noSwiping : true,
+    noSwipingClass : 'stop-swiping',
 });
