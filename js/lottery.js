@@ -1,8 +1,30 @@
 
+var scrollWra = new BScroll('#scrollWra',{
+    scrollbar: {
+        fade: true
+    },
+    click: true,
+    pullUpLoad: {
+        threshold: 0
+    }
+});
+
 //点击中奖详情查看
 $('.win-details').on('click',function(){
     $('.winning').show();
+    scrollWra.refresh();
 });
+
+//点击关闭中奖详情
+$('.close').on('click',function(){
+    $('.winning').hide();
+});
+
+//点击中奖记录查看
+$('.win-record').on('click',function(){
+    $('.winning').show();
+});
+
 //点击关闭中奖纪录
 $('.close').on('click',function(){
     $('.winning').hide();
@@ -55,4 +77,46 @@ $(function() {
             },1000);
         }
     };
+});
+
+
+
+var hasNext = true;     // 是否有下一页;
+var page = 1;    // 从第一页开始加载;
+
+// 监听页面上滑加载;
+scrollWra.on('pullingUp', function () {
+    if (!hasNext) {
+        $('#loading').text('已经没有更多数据了');
+        return;
+    }
+
+    page++;
+
+    if (page == 6) {
+        hasNext = false;
+    }
+
+    var html = '';
+
+    for (var i = 0; i < 10; i++) {
+        html += '<div class="record">';
+        html += '<div class="record-time">刚刚</div>';
+        html += '<div class="record-name">我是微信昵称</div>';
+        html += '<div class="record-text">抽中了10积分</div>';
+        html += '</div>';
+    }
+
+    $('.product-list').append(html);
+    scrollWra.finishPullUp();
+    scrollWra.refresh();
+});
+
+//轮播图
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    direction : 'vertical',
+    pagination : '.swiper-pagination',
+    autoplay: 3000,//可选选项，自动滑动
+    autoplayDisableOnInteraction: false,
 });

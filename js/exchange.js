@@ -91,12 +91,24 @@ scrollWra.on('pullingUp', function () {
 
 //点击确认退货
 $('.confirmed').on('click',function(){
-    if ($('#name').val() == '') {
-        alert('请输入姓名');
-    } else if ($('#tel').val() == '') {
-        alert('请输入电话号码');
-    } else if ($('#text').val() == '') {
-        alert('请输入退单理由');
+    var reg = /^1[0-9]{10}$/;
+    var name = $('#name').val();
+    var text = $('#text').val();
+    if (name == '') {
+        common.alert({
+            mask: true,
+            content: '请输入姓名',
+        });
+    } else if (!reg.test($('#tel').val())) {
+        common.alert({
+            mask: true,
+            content: '请输入电话号码',
+        });
+    } else if (text == '') {
+        common.alert({
+            mask: true,
+            content: '请输入退单理由',
+        });
     } else {
         window.location.href = './exchange.html'
     };

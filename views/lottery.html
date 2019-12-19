@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>积分抽奖</title>
     <link rel="stylesheet" href="../css/lottery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
             </div>
             <!--抽奖内容-->
             <ul class="lucky-draw">
-                <li class="one active">
+                <li class="active">
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="integral1">
@@ -40,7 +41,7 @@
                         <div class="integral1-text">10积分</div>
                     </div>
                 </li>
-                <li class="two">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="first-prize">
@@ -48,7 +49,7 @@
                         <div class="first-prize-text">一等奖</div>
                     </div>
                 </li>
-                <li class="three">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="thanks">
@@ -56,7 +57,7 @@
                         <div class="thanks-text">谢谢参与</div>
                     </div>
                 </li>
-                <li class="four">
+                <li>
                     <img class="prize block" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="integral2">
@@ -64,8 +65,7 @@
                         <div class="integral2-text">10积分</div>
                     </div>
                 </li>
-
-                <li class="five">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="third-prize">
@@ -73,7 +73,7 @@
                         <div class="third-prize-text">三等奖</div>
                     </div>
                 </li>
-                <li class="six">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="integral3">
@@ -81,7 +81,7 @@
                         <div class="integral3-text">20积分</div>
                     </div>
                 </li>
-                <li class="seven">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="second-prize">
@@ -89,7 +89,7 @@
                         <div class="second-prize-text">二等奖</div>
                     </div>
                 </li>
-                <li class="eight">
+                <li>
                     <img class="prize" src="../img/1_16.png">
                     <img class="border" src="../img/1_44.png">
                     <div class="participate">
@@ -108,12 +108,14 @@
             <div class="horn">
                 <img class="horn-img" src="../img/1_26.png">
             </div>
-            <div class="lucky">
-                <ul class="lucky-people">
-                    <li class="lucky-guy">
-                        <div class="lucky-name">恭喜 我** 抽中二等奖</div>
-                    </li>
-                </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="lucky-guy">
+                            <div class="lucky-name">恭喜 我** 抽中二等奖</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--中奖纪录-->
@@ -123,22 +125,38 @@
             </div>
             <div class="winning-record">
                 <img class="record-bg" src="../img/1_31.png">
-                <ul class="record-nav">
-                    <li class="record-people">
-                        <div class="record">
-                            <div class="record-time">刚刚</div>
-                            <div class="record-name">我是微信昵称</div>
-                            <div class="record-text">抽中了10积分</div>
+                <div class="scroll-wra" id="scrollWra">
+                    <div class="wrapper">
+                        <div class="product-list">
+                            <div class="record">
+                                <div class="record-time">刚刚</div>
+                                <div class="record-name">我是微信昵称</div>
+                                <div class="record-text">抽中了10积分</div>
+                            </div>
+                            <div class="record">
+                                <div class="record-time">刚刚</div>
+                                <div class="record-name">我是微信昵称</div>
+                                <div class="record-text">抽中了10积分</div>
+                            </div>
+                            <div class="record">
+                                <div class="record-time">刚刚</div>
+                                <div class="record-name">我是微信昵称</div>
+                                <div class="record-text">抽中了10积分</div>
+                            </div>
+                            <div class="record">
+                                <div class="record-time">刚刚</div>
+                                <div class="record-name">我是微信昵称</div>
+                                <div class="record-text">抽中了10积分</div>
+                            </div>
+                            <div class="record">
+                                <div class="record-time">刚刚</div>
+                                <div class="record-name">我是微信昵称</div>
+                                <div class="record-text">抽中了10积分</div>
+                            </div>
                         </div>
-                    </li>
-                    <li class="record-people">
-                        <div class="record">
-                            <div class="record-time">刚刚</div>
-                            <div class="record-name">我是微信昵称</div>
-                            <div class="record-text">抽中了10积分</div>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="loading-text">上滑加载更多</div>
+                </div> 
             </div>
         </div>
         <!--中奖详情和纪录-->
@@ -192,6 +210,8 @@
         </div>
     </div>
     <script src="../js/jquery-2.2.2.min.js"></script>
+    <script src="../js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="../js/bscroll.js"></script>
     <script src="../js/lottery.js"></script>
 </body>
 </html>

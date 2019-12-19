@@ -40,7 +40,7 @@ scrollWra.on('pullingUp', function () {
     var html = '';
 
     for (var i = 0; i < 10; i++) {
-        html += '<div class="shop">';
+        html += '<a class="shop" href="./details.html">';
         html += '<img class="shop-img" src="../img/1_3.png">';
         html += '<div class="shop-text">';
         html += '<div class="shop-name">华为P30全网通双4G手机</div>';
@@ -48,7 +48,7 @@ scrollWra.on('pullingUp', function () {
         html += '<div class="need">17896积分<del>价值9999元</del></div>';
         html += '</div>';
         html += '<img class="immediately" id="imdi1" src="../img/1_4.png">';
-        html += '</div>';
+        html += '</a>';
     }
 
     $('.product-list').append(html);

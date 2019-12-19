@@ -123,7 +123,7 @@
                 }
             }
 
-            .one {
+            li:nth-of-type(1) {
                 left: 0;
                 top: 0;
 
@@ -141,7 +141,7 @@
                 }
             }
 
-            .two {
+            li:nth-of-type(2) {
                 left: 195px;
                 top: 0;
 
@@ -159,7 +159,7 @@
                 }
             }
 
-            .three {
+            li:nth-of-type(3) {
                 left:390px;
                 top: 0;
 
@@ -178,7 +178,7 @@
                 }
             }
 
-            .four {
+            li:nth-of-type(4) {
                 left:390px;
                 top: 195px;
 
@@ -197,7 +197,7 @@
 
             }
 
-            .five {
+            li:nth-of-type(5) {
                 left:390px;
                 top: 390px;
 
@@ -215,7 +215,7 @@
                 }
             }
 
-            .six {
+            li:nth-of-type(6) {
                 left:195px;
                 top: 390px;
                 
@@ -233,7 +233,7 @@
                 }
             }
 
-            .seven {
+            li:nth-of-type(7) {
                 left:0;
                 top: 390px;
 
@@ -251,7 +251,7 @@
                 }
             }
 
-            .eight {
+            li:nth-of-type(8) {
                 left:0;
                 top: 195px;
 
@@ -302,21 +302,20 @@
             left: 48px;
             top: 13px;
         }
+        
+        .swiper-container {
+            height: 60px;
+        }
+                
+        .lucky-guy{
+            width: 400px;
+            height: 60px;
+            margin-left: 100px;
 
-        .lucky {
-
-            .lucky-people{
-                display: flex;
-
-                .lucky-guy{
-
-                    .lucky-name{
-                        font-size: 24px;
-                        line-height: 60px;
-                        text-indent: 100px;
-                        color: #fff;
-                    }
-                }
+            .lucky-name{
+                font-size: 24px;
+                line-height: 60px;
+                color: #fff;
             }
         }
     }
@@ -338,6 +337,8 @@
         }
 
         .winning-record {
+            height: 100%;
+            width: 100%;
 
             .record-bg {
                 position: absolute;
@@ -345,24 +346,35 @@
                 top: 313px;
             }
 
-            .record-nav {
+            .scroll-wra {
                 position: absolute;
                 left: 117px;
                 top: 501px;
+                z-index: 3333;
 
-                .record-people {
+                height: 270px;
+                width: 500px;
+            
+                overflow: hidden;
+            }
 
-                    .record {
-                        display: flex;
-                        font-size: 28px;
-                        line-height: 28px;
-                        color: #fa4043;
+            .record {
+                width: 500px;
+                display: flex;
+                font-size: 28px;
+                line-height: 28px;
+                color: #fa4043;
 
-                        .record-name {
-                            margin: 0 69px 28px 31px;
-                        }
-                    }
+                .record-name {
+                    margin: 0 69px 28px 31px;
                 }
+            }
+                
+            .loading-text {
+                font-size: 22px;
+                line-height: 22px;
+                text-align: center;
+                padding: 20px 0;
             }
         }
     }
