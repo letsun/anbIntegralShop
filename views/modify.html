@@ -25,39 +25,39 @@
         <!--联系人信息-->
         <div class="main">
             <ul class="write">
-                <li>
-                    <div>收货人</div>
-                    <input type="text" placeholder="请填写您的姓名" maxlength="15" value="林嘉悦">
+                <li class="consignee">
+                    <div class="specific consignee-text">收货人</div>
+                    <input id="name" type="text" placeholder="请填写您的姓名" maxlength="15">
                 </li>
-                <li>
-                    <div>联系电话</div>
-                    <input type="text" placeholder="请填写您的手机号码" maxlength="30" value="135">
+                <li class="tel">
+                    <div class="specific tel-phone">联系电话</div>
+                    <input id="tel" type="text" placeholder="请填写您的手机号码" maxlength="11">
                 </li>
                 <li class="inputBox">
-                    <div>省</div>
-                    <div>
+                    <div class="specific sheng">省</div>
+                    <div class="choose">
                         <select id="province" class="ssxz">
                             <option>选择省份</option>
                         </select>
                     </div>
                 </li>
                 <li class="inputBox cityBox">
-                    <div>市</div>
-                    <div>
+                    <div class="specific shi">市</div>
+                    <div class="choose">
                         <select id="city" class="ssxz">
                             <option>选择市级</option>
                         </select>
                     </div>
                 </li>
                 <li class="inputBox areaBox">
-                    <div>区</div>
-                    <div>
+                    <div class="specific qu">区</div>
+                    <div class="choose">
                         <select id="area" class="ssxz">
                             <option>选择区/县</option>
                         </select>
                     </div>
                 </li>
-                <li>
+                <li class="address">
                     <textarea class="input1" placeholder="请填写详细地址，不少于5个字"></textarea>
                 </li>
             </ul>

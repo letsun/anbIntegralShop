@@ -1,6 +1,6 @@
 //点击返回首页
 $('.back').on('click',function(){
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/management.html'
+    window.location.href = './management.html'
 });
 
 //点击返回首页
@@ -8,9 +8,19 @@ $('#choose').on('click',function(){
     $('.city').show();
 });
 
-//点击关闭省市区弹出框
-$('.close').on('click',function(){
-    $('.city').hide();
+//保存地址点击
+$('.save').on('click',function(){
+    if ($('#name').val() == '') {
+        alert('请输入姓名');
+    } else if ($('#tel').val() == '') {
+        alert('请输入电话号码');
+    } else if ($('#province').val() == '') {
+        alert('请选择省份');
+    } else if ($('#city').val() == '') {
+        alert('请选择市级');
+    } else {
+        window.location.href = './management.html'
+    };
 })
 
 //选择省市区

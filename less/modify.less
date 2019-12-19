@@ -60,7 +60,7 @@ html {
                 display: flex;
                 border-bottom: 2px solid #f7f7f9;
 
-                div {
+                .specific {
                     width: 137px;
                     height: 93px;
                     line-height: 93px;
@@ -69,7 +69,7 @@ html {
                 }
 
                 input {
-                    width: 368px;
+                    width: 100%;
                     height: 93px;
                     flex: 1;
                     font-size: 28px;
@@ -77,8 +77,10 @@ html {
                 }
 
                 .choose {
-                    color: #8c8b90;
-                    margin-left: 400px;
+                    flex: 1;
+                    height: 93px;
+                    line-height: 93px;
+                    margin-left: 26px;
                 }
 
                 .choose-img {
@@ -96,8 +98,33 @@ html {
                     .ellipsis(3);
                 }
 
+                select {
+                    width: 100%;
+                    border: none;
+                    color: #999;
+                    font-size: 25px;
+                    -webkit-appearance: inherit;
+                    -moz-appearance: inherit;
+                    outline: none;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                    background-color: #fff;
+
+                    option {
+                        font-size: 12px;
+
+                    }
+                }
+        
+                input:-webkit-autofill {
+                    box-shadow: 0 0 0 1000px rgb(217, 217, 217) inset;
+                }
+        
+                input::-webkit-input-placeholder {
+                    color: #999;
+                }
+
                 .ssxz {
-                    width: 300px;
+                    width: 100%;
                     height: 50px;
                     font-size: 25px;
                 }

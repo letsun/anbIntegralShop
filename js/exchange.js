@@ -7,18 +7,22 @@ $('.nav-ation').on('click',function(){
     $('.product-list').html('');
     
 })
+
 //点击我要退单弹出退货框
 $('.chargeback').on('click',function(){
     $('.box').show();
 })
+
 //点击否返回
 $('.no').on('click',function(){
     $('.box').hide();
 })
+
 //点击是弹出退单信息
 $('.yes').on('click',function(){
     $('.bg').show();
 })
+
 //点击是弹出退单信息
 $('.close').on('click',function(){
     $('.bg').hide();
@@ -84,3 +88,16 @@ scrollWra.on('pullingUp', function () {
     scrollWra.finishPullUp();
     scrollWra.refresh();
 });
+
+//点击确认退货
+$('.confirmed').on('click',function(){
+    if ($('#name').val() == '') {
+        alert('请输入姓名');
+    } else if ($('#tel').val() == '') {
+        alert('请输入电话号码');
+    } else if ($('#text').val() == '') {
+        alert('请输入退单理由');
+    } else {
+        window.location.href = './exchange.html'
+    };
+})

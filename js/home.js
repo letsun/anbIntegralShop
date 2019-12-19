@@ -8,7 +8,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 //点击跳转兑换商品页面
 $('#imdi1').on('click',function(){
-    window.location.href = 'http://192.168.1.21/2019-12/anbeiIntegralStop/views/details.html'
+    window.location.href = './details.html'
 });
 
 var scrollWra = new BScroll('#scrollWra',{

@@ -60,6 +60,9 @@
     }
 
     .details {
+        position: absolute;
+        left: 0;
+        top: 0;
 
         .small-bg {
             position: absolute;
@@ -83,13 +86,46 @@
             top: 407px;
             width: 579px;
             height: 568px;
-            display: flex;
-            flex-wrap: wrap;
 
             li {
                 width: 188px;
                 height: 184px;
-                margin-right: 7px;
+
+                border-radius: 24px;
+
+                overflow: hidden;
+
+                box-sizing: border-box;
+
+            }
+
+            li {
+                position: absolute;
+
+                .prize {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .border {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 111;
+                    display: none;
+                }
+            }
+
+            .active {
+
+                .border {
+                    display: block;
+                }
+            }
+
+            .one {
+                left: 0;
+                top: 0;
 
                 .integral1 {
                     position: absolute;
@@ -103,11 +139,16 @@
                         margin-left: 7px;
                     }
                 }
+            }
+
+            .two {
+                left: 195px;
+                top: 0;
 
                 .first-prize {
                     position: absolute;
-                    left: 230px;
-                    top: 19px;
+                    left: 35px;
+                    top: 22px;
 
                     .first-prize-text {
                         font-size: 28px;
@@ -116,10 +157,15 @@
                         margin-left: 19px;
                     }
                 }
+            }
+
+            .three {
+                left:390px;
+                top: 0;
 
                 .thanks {
                     position: absolute;
-                    left: 438px;
+                    left: 44px;
                     top: 15px;
 
                     .thanks-text {
@@ -130,36 +176,16 @@
                         margin-top: 8px;
                     }
                 }
+            }
 
-                .participate {
-                    position: absolute;
-                    left: 29px;
-                    top: 205px;
-
-                    .participate-text {
-                        font-size: 28px;
-                        line-height: 28px;
-                        color: #7b3e3d;
-                        margin-left: 19px;
-                    }
-                }
-
-                .expend {
-
-                    .expend-text {
-                        position: absolute;
-                        left: 239px;
-                        top: 328px;
-                        font-size: 20px;
-                        line-height: 20px;
-                        color: #33342f;
-                    }
-                }
+            .four {
+                left:390px;
+                top: 195px;
 
                 .integral2 {
                     position: absolute;
-                    left: 438px;
-                    top: 212px;
+                    left: 45px;
+                    top: 20px;
 
                     .integral2-text {
                         font-size: 28px;
@@ -169,36 +195,16 @@
                     }
                 }
 
-                .second-prize {
-                    position: absolute;
-                    left: 28px;
-                    top: 399px;
+            }
 
-                    .second-prize-text {
-                        font-size: 28px;
-                        line-height: 28px;
-                        color: #7b3e3d;
-                        margin-left: 19px;
-                    }
-                }
-
-                .integral3 {
-                    position: absolute;
-                    left: 218px;
-                    top: 397px;
-
-                    .integral3-text {
-                        font-size: 28px;
-                        line-height: 28px;
-                        color: #7b3e3d;
-                        margin-left: 28px;
-                    }
-                }
+            .five {
+                left:390px;
+                top: 390px;
 
                 .third-prize {
                     position: absolute;
-                    left: 424px;
-                    top: 399px;
+                    left: 33px;
+                    top: 15px;
 
                     .third-prize-text {
                         font-size: 28px;
@@ -209,16 +215,75 @@
                 }
             }
 
-            .three {
-                margin-right: 0;
-            }
-
             .six {
-                margin-right: 0;
+                left:195px;
+                top: 390px;
+                
+                .integral3 {
+                    position: absolute;
+                    left: 23px;
+                    top: 13px;
+
+                    .integral3-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 28px;
+                    }
+                }
             }
 
-            .nine {
-                margin-right: 0;
+            .seven {
+                left:0;
+                top: 390px;
+
+                .second-prize {
+                    position: absolute;
+                    left: 28px;
+                    top: 15px;
+
+                    .second-prize-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+            }
+
+            .eight {
+                left:0;
+                top: 195px;
+
+                .participate {
+                    position: absolute;
+                    left: 29px;
+                    top: 25px;
+
+                    .participate-text {
+                        font-size: 28px;
+                        line-height: 28px;
+                        color: #7b3e3d;
+                        margin-left: 19px;
+                    }
+                }
+            }
+
+        }
+
+        .expend {
+            position: absolute;
+            left: 280px;
+            top: 596px;
+            z-index: 10;
+
+            .expend-text {
+                position: absolute;
+                left: 44px;
+                top: 136px;
+                font-size: 20px;
+                line-height: 20px;
+                color: #33342f;
             }
         }
     }
