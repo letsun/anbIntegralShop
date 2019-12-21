@@ -34,7 +34,7 @@ $(function() {
     var timer = null;
     var count = 0;
     var index = 0;
-    var delay = 500;
+    var delay = 400;
     var isClick = true;
     // 点击抽奖
     $('.expend').on('click',function () {
@@ -58,16 +58,16 @@ $(function() {
         if (delay <= 80) {
             delay = 80;
         }
-        if (count >= 32) {
-            delay += 100;
+        if (count >= 24) {
+            delay += 120;
         }
         clearInterval(timer);
         console.log(count);
         timer = setInterval(lottery, delay);
-        if (count >= 32 && count % 8 == 2) {
+        if (count >= 24 && count % 8 == 2) {
             clearInterval(timer);
             setTimeout(function () {
-                $('.result-win').fadeIn(function () {
+                $('.gain').fadeIn(function () {
                     isClick = true;
                     count = 0;
                     index = 0;
@@ -121,3 +121,35 @@ var mySwiper = new Swiper('.swiper-container', {
     noSwiping : true,
     noSwipingClass : 'stop-swiping',
 });
+
+//点击领取
+$('.get').on('click',function(){
+    $('.gain').hide();
+    $('.write').show();
+})
+
+//点击填写信息提交按钮
+$('.submit').on('click',function(){
+    var reg = /^1[0-9]{10}$/;
+    var name = $('#name').val();
+    var tel = $('#tel').val()
+    var area = $('#area').val(); 
+    if ($.trim(name) == '') {
+        common.alert({
+            mask: true,
+            content: '请输入姓名',
+        })
+    } else if (!reg.test($.trim(tel))) {
+        common.alert({
+            mask: true,
+            content: '请输入电话号码',
+        })
+    } else if (area && $.trim(area) == '') {
+        common.alert({
+            mask: true,
+            content: '请输入地址',
+        })
+    } else {
+        $('.write').hide()
+    };
+})
